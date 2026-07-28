@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "name": "vetta-open-abilities-test",
   "displayName": "Vetta Open Abilities Test",
-  "marketplaceVersion": "2026.07.2",
+  "marketplaceVersion": "2026.07.3",
   "repository": "https://github.com/flower0wine/vetta-open-abilities-test",
   "minAppVersion": "0.5.11",
   "abilities": [
@@ -46,6 +46,46 @@
       },
       "source": {
         "path": "abilities/scenes/open-code-review"
+      }
+    },
+    {
+      "type": "plugin",
+      "slug": "open-marketplace-demo-plugin",
+      "name": "Open Marketplace Demo Plugin",
+      "description": "A minimal disabled-by-default plugin used to verify GitHub marketplace installation.",
+      "version": "1.0.0",
+      "configVersion": 1,
+      "license": "MIT",
+      "author": "Vetta",
+      "category": "Examples",
+      "tags": ["example", "plugin", "open-source"],
+      "detail": {
+        "content": "# Open Marketplace Demo Plugin\n\nThis plugin verifies package validation and installation through the GitHub marketplace."
+      },
+      "source": {
+        "path": "abilities/plugins/open-marketplace-demo-plugin"
+      }
+    },
+    {
+      "type": "bundle",
+      "slug": "open-marketplace-starter",
+      "name": "Open Marketplace Starter",
+      "description": "A bundle containing one skill, one scene, and one plugin from this repository.",
+      "version": "1.0.0",
+      "configVersion": 1,
+      "license": "MIT",
+      "author": "Vetta",
+      "category": "Examples",
+      "tags": ["example", "bundle", "open-source"],
+      "detail": {
+        "content": "# Open Marketplace Starter\n\nInstalls the complete set of test abilities from this repository."
+      },
+      "config": {
+        "members": [
+          { "type": "skill", "slug": "hello-vetta" },
+          { "type": "scene", "slug": "open-code-review" },
+          { "type": "plugin", "slug": "open-marketplace-demo-plugin" }
+        ]
       }
     }
   ]
