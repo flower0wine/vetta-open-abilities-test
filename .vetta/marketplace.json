@@ -1,0 +1,51 @@
+{
+	"schemaVersion": 1,
+	"name": "vetta-open-abilities-test",
+	"displayName": "Vetta Open Abilities Test",
+	"marketplaceVersion": "2026.07.1",
+	"repository": "https://github.com/flower0wine/vetta-open-abilities-test",
+	"abilities": [
+		{
+			"type": "skill",
+			"slug": "hello-vetta",
+			"name": "Hello Vetta",
+			"description": "A minimal open skill used to verify GitHub marketplace synchronization and installation.",
+			"version": "1.0.0",
+			"configVersion": 1,
+			"license": "MIT",
+			"author": "Vetta",
+			"category": "Examples",
+			"tags": ["example", "open-source"],
+			"detail": {
+				"content": "# Hello Vetta\n\nThis ability verifies the open marketplace end-to-end path.",
+				"meta": [
+					{
+						"key": "license",
+						"value": "MIT"
+					}
+				]
+			},
+			"source": {
+				"path": "abilities/skills/hello-vetta"
+			}
+		},
+		{
+			"type": "scene",
+			"slug": "open-code-review",
+			"name": "Open Code Review",
+			"description": "A small scene for reviewing code with explicit findings and verification steps.",
+			"version": "1.0.0",
+			"configVersion": 1,
+			"license": "MIT",
+			"author": "Vetta",
+			"category": "Development",
+			"tags": ["review", "code"],
+			"detail": {
+				"content": "# Open Code Review\n\nReview changes by severity, cite concrete files, and report verification results."
+			},
+			"source": {
+				"path": "abilities/scenes/open-code-review"
+			}
+		}
+	]
+}
