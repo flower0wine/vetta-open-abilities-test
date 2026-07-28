@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "slug": "context7",
+  "version": "1.0.0",
+  "server": {
+    "type": "http",
+    "url": "https://mcp.context7.com/mcp"
+  }
+}
