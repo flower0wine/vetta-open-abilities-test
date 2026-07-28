@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "name": "vetta-open-abilities-test",
   "displayName": "Vetta Open Abilities Test",
-  "marketplaceVersion": "2026.07.4",
+  "marketplaceVersion": "2026.07.5",
   "repository": "https://github.com/flower0wine/vetta-open-abilities-test",
   "minAppVersion": "0.5.11",
   "abilities": [
@@ -16,7 +16,10 @@
       "license": "MIT",
       "author": "Vetta",
       "category": "Examples",
-      "tags": ["example", "open-source"],
+      "tags": [
+        "example",
+        "open-source"
+      ],
       "detail": {
         "content": "# Hello Vetta\n\nThis ability verifies the open marketplace end-to-end path.",
         "meta": [
@@ -40,7 +43,10 @@
       "license": "MIT",
       "author": "Vetta",
       "category": "Development",
-      "tags": ["review", "code"],
+      "tags": [
+        "review",
+        "code"
+      ],
       "detail": {
         "content": "# Open Code Review\n\nReview changes by severity, cite concrete files, and report verification results."
       },
@@ -58,7 +64,11 @@
       "license": "MIT",
       "author": "Vetta",
       "category": "Examples",
-      "tags": ["example", "plugin", "open-source"],
+      "tags": [
+        "example",
+        "plugin",
+        "open-source"
+      ],
       "detail": {
         "content": "# Open Marketplace Demo Plugin\n\nThis plugin verifies package validation and installation through the GitHub marketplace."
       },
@@ -76,15 +86,16 @@
       "license": "MIT",
       "author": "Upstash",
       "category": "Development",
-      "tags": ["documentation", "mcp", "open-source"],
+      "tags": [
+        "documentation",
+        "mcp",
+        "open-source"
+      ],
       "detail": {
         "content": "# Context7 MCP\n\nAdds the public Context7 HTTP MCP endpoint to Vetta."
       },
-      "config": {
-        "mcp": {
-          "type": "http",
-          "url": "https://mcp.context7.com/mcp"
-        }
+      "source": {
+        "path": "abilities/mcp/context7"
       }
     },
     {
@@ -97,16 +108,32 @@
       "license": "MIT",
       "author": "Vetta",
       "category": "Examples",
-      "tags": ["example", "bundle", "open-source"],
+      "tags": [
+        "example",
+        "bundle",
+        "open-source"
+      ],
       "detail": {
         "content": "# Open Marketplace Starter\n\nInstalls the complete set of test abilities from this repository."
       },
       "config": {
         "members": [
-          { "type": "skill", "slug": "hello-vetta" },
-          { "type": "scene", "slug": "open-code-review" },
-          { "type": "plugin", "slug": "open-marketplace-demo-plugin" },
-          { "type": "mcp", "slug": "context7" }
+          {
+            "type": "skill",
+            "slug": "hello-vetta"
+          },
+          {
+            "type": "scene",
+            "slug": "open-code-review"
+          },
+          {
+            "type": "plugin",
+            "slug": "open-marketplace-demo-plugin"
+          },
+          {
+            "type": "mcp",
+            "slug": "context7"
+          }
         ]
       }
     }
