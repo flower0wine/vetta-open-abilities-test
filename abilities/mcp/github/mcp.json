@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "slug": "github",
+  "version": "1.0.0",
+  "server": {
+    "type": "http",
+    "url": "https://api.githubcopilot.com/mcp/"
+  },
+  "parameters": [
+    {
+      "key": "Authorization",
+      "label": "GitHub Personal Access Token",
+      "required": true,
+      "secret": true,
+      "placeholder": "github_pat_… / ghp_…",
+      "helpUrl": "https://github.com/settings/personal-access-tokens",
+      "valueTemplate": "Bearer {value}"
+    }
+  ]
+}

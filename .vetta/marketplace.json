@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "name": "vetta-open-abilities-test",
   "displayName": "Vetta Open Abilities Test",
-  "marketplaceVersion": "2026.07.6",
+  "marketplaceVersion": "2026.07.7",
   "repository": "https://github.com/flower0wine/vetta-open-abilities-test",
   "minAppVersion": "0.5.11",
   "abilities": [
@@ -96,6 +96,123 @@
       },
       "source": {
         "path": "abilities/mcp/context7"
+      }
+    },
+    {
+      "type": "mcp",
+      "slug": "github",
+      "name": "GitHub MCP",
+      "description": "Connects Vetta to GitHub repositories, issues, pull requests, and code search through GitHub's hosted MCP endpoint.",
+      "version": "1.0.0",
+      "configVersion": 1,
+      "license": "",
+      "author": "GitHub",
+      "category": "Development",
+      "tags": [
+        "github",
+        "repositories",
+        "pull-requests",
+        "mcp"
+      ],
+      "detail": {
+        "content": "# GitHub MCP\n\nConnect Vetta to GitHub's hosted MCP endpoint to inspect repositories, search code, work with issues, and review pull requests.\n\n## How to use\n\n1. Install this ability.\n2. Create a GitHub personal access token with only the repository permissions you need.\n3. Paste the token when Vetta asks for it.\n4. Ask the agent to inspect a repository, issue, or pull request.\n\nThe token is written to your local MCP configuration and is not stored in this repository.",
+        "meta": [
+          {
+            "key": "docs",
+            "value": "https://docs.github.com/en/copilot/customizing-copilot/extending-copilot-chat-with-mcp"
+          },
+          {
+            "key": "homepage",
+            "value": "https://github.com/settings/personal-access-tokens"
+          }
+        ],
+        "i18n": {
+          "zh": {
+            "name": "GitHub MCP",
+            "description": "通过 GitHub 托管的 MCP 服务连接仓库、Issue、Pull Request 与代码搜索。",
+            "content": "# GitHub MCP\n\n通过 GitHub 官方托管的 MCP 服务，让 Vetta 可以查看仓库、搜索代码、处理 Issue，并辅助审查 Pull Request。\n\n## 使用方法\n\n1. 安装这个能力。\n2. 创建一个 GitHub Personal Access Token，只授予实际需要的仓库权限。\n3. 在 Vetta 提示时粘贴 Token。\n4. 让 Agent 查看仓库、Issue 或 Pull Request。\n\nToken 只会写入本机 MCP 配置，不会保存在这个仓库中。"
+          }
+        }
+      },
+      "source": {
+        "path": "abilities/mcp/github"
+      }
+    },
+    {
+      "type": "mcp",
+      "slug": "notion",
+      "name": "Notion MCP",
+      "description": "Connects Vetta to the official Notion MCP service with browser-based OAuth authorization.",
+      "version": "1.0.0",
+      "configVersion": 1,
+      "license": "",
+      "author": "Notion",
+      "category": "Productivity",
+      "tags": [
+        "notion",
+        "documents",
+        "knowledge-base",
+        "oauth",
+        "mcp"
+      ],
+      "detail": {
+        "content": "# Notion MCP\n\nConnect Vetta to Notion's official hosted MCP service to search and work with pages and databases that you authorize.\n\n## How to use\n\n1. Install this ability.\n2. Continue to the browser authorization page.\n3. Sign in to Notion and select the workspace content Vetta may access.\n4. Ask the agent to find, summarize, or update authorized Notion content.\n\nNo Notion integration secret is required. Access is controlled by Notion OAuth and can be revoked later.",
+        "meta": [
+          {
+            "key": "docs",
+            "value": "https://developers.notion.com/guides/mcp/get-started-with-mcp"
+          }
+        ],
+        "i18n": {
+          "zh": {
+            "name": "Notion MCP",
+            "description": "通过浏览器 OAuth 授权连接 Notion 官方 MCP 服务。",
+            "content": "# Notion MCP\n\n通过 Notion 官方托管的 MCP 服务，让 Vetta 可以搜索和处理你授权的页面与数据库。\n\n## 使用方法\n\n1. 安装这个能力。\n2. 继续前往浏览器授权页面。\n3. 登录 Notion，并选择允许 Vetta 访问的工作区内容。\n4. 让 Agent 查找、总结或更新已授权的 Notion 内容。\n\n不需要 Notion Integration Secret。访问权限由 Notion OAuth 管理，之后可以随时撤销。"
+          }
+        }
+      },
+      "source": {
+        "path": "abilities/mcp/notion"
+      }
+    },
+    {
+      "type": "mcp",
+      "slug": "figma",
+      "name": "Figma MCP",
+      "description": "Runs the community Figma Developer MCP server locally so Vetta can inspect Figma design data with a personal access token.",
+      "version": "1.0.0",
+      "configVersion": 1,
+      "license": "MIT",
+      "author": "GLips",
+      "category": "Design",
+      "tags": [
+        "figma",
+        "design",
+        "stdio",
+        "mcp"
+      ],
+      "detail": {
+        "content": "# Figma MCP\n\nRun the community `figma-developer-mcp` package locally and let Vetta inspect Figma design files through the Figma API.\n\n## Requirements\n\n- Node.js and `npx` available on the computer.\n- A Figma personal access token.\n\n## How to use\n\n1. Create a Figma personal access token.\n2. Install this ability and paste the token when prompted.\n3. Give the agent a Figma file URL or file key and describe what you want to inspect.\n\nThis is the community Framelink server, not Figma's official hosted MCP service.",
+        "meta": [
+          {
+            "key": "repository",
+            "value": "https://github.com/GLips/Figma-Context-MCP"
+          },
+          {
+            "key": "docs",
+            "value": "https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens"
+          }
+        ],
+        "i18n": {
+          "zh": {
+            "name": "Figma MCP",
+            "description": "在本机运行社区版 Figma Developer MCP，并通过 Personal Access Token 读取设计数据。",
+            "content": "# Figma MCP\n\n在本机运行社区包 `figma-developer-mcp`，让 Vetta 可以通过 Figma API 查看设计文件数据。\n\n## 环境要求\n\n- 电脑上可以使用 Node.js 和 `npx`。\n- 一个 Figma Personal Access Token。\n\n## 使用方法\n\n1. 创建 Figma Personal Access Token。\n2. 安装这个能力，并在提示时粘贴 Token。\n3. 向 Agent 提供 Figma 文件链接或 File Key，并说明需要查看的内容。\n\n这是社区维护的 Framelink 服务，不是 Figma 官方托管 MCP。"
+          }
+        }
+      },
+      "source": {
+        "path": "abilities/mcp/figma"
       }
     },
     {
