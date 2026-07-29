@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "blocks": [
+    {
+      "type": "showcase",
+      "showcase": {
+        "template": "chat-thread",
+        "user_prompt": "使用 Hello Vetta 能力向我打个招呼。",
+        "assistant_reply": "你好，我已从 GitHub 开源能力市场加载 Hello Vetta。"
+      }
+    },
+    {
+      "type": "feature-grid",
+      "title": "一个最小但完整的 Skill",
+      "items": [
+        {
+          "title": "开源可读",
+          "description": "核心行为只有一份 SKILL.md，可以直接查看能力的真实指令。",
+          "icon": "solar:document-bold"
+        },
+        {
+          "title": "本地安装",
+          "description": "安装后复制到本地 Skill 目录，不依赖市场仓库持续在线。",
+          "icon": "solar:folder-bold"
+        },
+        {
+          "title": "链路验证",
+          "description": "用于确认 GitHub 同步、详情解析、安装和调用流程都能正常工作。",
+          "icon": "solar:star-bold"
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "验证流程",
+      "items": [
+        {
+          "title": "安装能力",
+          "description": "从当前详情页安装 Hello Vetta。"
+        },
+        {
+          "title": "新建一次对话",
+          "description": "让 Agent 使用 Hello Vetta 向你问候。"
+        },
+        {
+          "title": "检查回答来源",
+          "description": "回答应明确说明该能力来自 GitHub 开源市场。"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "tone": "info",
+      "title": "测试用途",
+      "content": "这是用于验证市场端到端链路的示例能力，不包含外部服务、凭据或后台进程。"
+    },
+    {
+      "type": "markdown",
+      "content": "## 能力内容\n\n该 Skill 只要求 Agent 返回简短问候，并说明能力来自 GitHub 开源市场。它刻意保持简单，便于把安装或加载问题与复杂业务逻辑区分开。"
+    },
+    {
+      "type": "links",
+      "title": "查看源码",
+      "items": [
+        {
+          "label": "测试市场仓库",
+          "href": "https://github.com/flower0wine/vetta-open-abilities-test"
+        }
+      ]
+    }
+  ]
+}

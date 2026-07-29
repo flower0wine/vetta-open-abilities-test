@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "type": "skill",
+  "slug": "hello-vetta",
+  "version": "1.0.0",
+  "icon": "solar:magic-stick-3-bold",
+  "detail": {
+    "format": "blocks",
+    "path": "detail.json",
+    "fallback": "README.md",
+    "meta": [
+      {
+        "key": "repository",
+        "value": "https://github.com/flower0wine/vetta-open-abilities-test"
+      },
+      {
+        "key": "license",
+        "value": "MIT"
+      }
+    ]
+  }
+}

@@ -2,50 +2,74 @@
   "schemaVersion": 1,
   "blocks": [
     {
-      "type": "feature-grid",
-      "title": "工作区能力",
-      "items": [
-        {
-          "title": "搜索与读取",
-          "description": "查找并读取你授权的页面、数据库和知识内容。",
-          "icon": "solar:magnifer-bold-duotone"
-        },
-        {
-          "title": "总结与更新",
-          "description": "让 Agent 总结内容，或在授权范围内更新页面。",
-          "icon": "solar:document-add-bold-duotone"
-        }
-      ]
+      "type": "showcase",
+      "showcase": {
+        "template": "chat-over-canvas",
+        "canvas": "docs",
+        "user_prompt": "从产品知识库里整理本季度的发布决策，并列出仍未解决的问题。",
+        "assistant_reply": "我会检索你授权的 Notion 页面，按决策、依据和未决事项整理，并保留来源线索。"
+      }
     },
     {
-      "type": "steps",
-      "title": "OAuth 授权",
+      "type": "feature-grid",
+      "title": "连接你的 Notion 工作区",
       "items": [
         {
-          "title": "安装能力",
-          "description": "安装后 Vetta 会打开 Notion 浏览器授权页面。"
+          "title": "搜索知识",
+          "description": "在授权范围内查找页面、数据库与团队知识，减少手动翻找。",
+          "icon": "solar:global-bold"
         },
         {
-          "title": "选择允许访问的内容",
-          "description": "登录 Notion，并明确选择工作区和页面范围。"
+          "title": "读取上下文",
+          "description": "让 Agent 理解页面内容、层级和相关资料，再继续分析或写作。",
+          "icon": "solar:document-bold"
         },
         {
-          "title": "在 Agent 中使用",
-          "description": "让 Agent 查找、总结或更新已授权的 Notion 内容。"
+          "title": "总结与整理",
+          "description": "把分散内容归纳成摘要、计划、决策记录或可执行清单。",
+          "icon": "solar:letter-bold"
+        },
+        {
+          "title": "受控更新",
+          "description": "在 OAuth 授权允许时更新页面，把对话结果沉淀回工作区。",
+          "icon": "solar:widget-2-bold"
         }
       ]
     },
     {
       "type": "callout",
       "tone": "success",
-      "title": "无需 Integration Secret",
-      "content": "访问权限由 Notion OAuth 管理，可以在之后撤销。"
+      "title": "使用官方 OAuth",
+      "content": "无需创建 Integration Secret。安装后通过浏览器登录 Notion，并明确选择允许访问的工作区与内容；授权之后可以随时撤销。"
+    },
+    {
+      "type": "steps",
+      "title": "完成授权",
+      "items": [
+        {
+          "title": "安装 Notion MCP",
+          "description": "Vetta 会添加 Notion 官方托管的 HTTP MCP 服务。"
+        },
+        {
+          "title": "在浏览器中授权",
+          "description": "登录 Notion，检查请求的权限，并选择允许访问的内容。"
+        },
+        {
+          "title": "从具体任务开始",
+          "description": "说明要查找的主题、时间范围和期望输出，帮助 Agent 缩小检索范围。"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## 推荐用法\n\n- 从项目页面生成周报或里程碑摘要\n- 汇总会议记录中的决策与负责人\n- 在知识库中查找制度、规范和历史背景\n- 把确认后的方案回写成 Notion 页面\n\n> Agent 只能访问你在 OAuth 流程中授权的内容。若页面不可见，请先检查 Notion 的连接范围，而不是扩大无关权限。"
     },
     {
       "type": "links",
+      "title": "官方资源",
       "items": [
         {
-          "label": "Notion MCP 文档",
+          "label": "Notion MCP 入门文档",
           "href": "https://developers.notion.com/guides/mcp/get-started-with-mcp"
         }
       ]

@@ -1,0 +1,5 @@
+# Open Marketplace Demo Plugin
+
+一个最小的 GitHub 市场插件，用于验证包校验、安装、权限授权、启停和卸载流程。
+
+插件安装后默认禁用，且不会自动获得清单中声明的 `storage.read` 权限。

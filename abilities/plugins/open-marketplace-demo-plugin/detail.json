@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "blocks": [
+    {
+      "type": "showcase",
+      "showcase": {
+        "template": "chat-thread",
+        "user_prompt": "安装这个测试插件会立即运行吗？",
+        "assistant_reply": "不会。GitHub 市场插件安装后默认保持禁用，权限也不会自动授予，你可以先检查清单再决定是否启用。"
+      }
+    },
+    {
+      "type": "feature-grid",
+      "title": "用于验证 Plugin 安全链路",
+      "items": [
+        {
+          "title": "安装后默认禁用",
+          "description": "插件进入本地 Plugin Store 后不会自动运行，由用户明确启用。",
+          "icon": "solar:lock-keyhole-bold"
+        },
+        {
+          "title": "权限单独授权",
+          "description": "清单声明 storage.read，但安装过程不会替用户授予权限。",
+          "icon": "solar:key-bold"
+        },
+        {
+          "title": "产物完整校验",
+          "description": "同步阶段检查 plugin.json、入口文件、版本和 API 兼容信息。",
+          "icon": "solar:shield-bold"
+        },
+        {
+          "title": "最小生命周期",
+          "description": "示例仅包含 activate 与 deactivate 空实现，便于隔离安装问题。",
+          "icon": "solar:bolt-bold"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "tone": "warning",
+      "title": "启用前检查权限",
+      "content": "这是一个测试插件。即使代码很小，也应先查看插件清单和源码，再决定是否授予 storage.read 权限并启用。"
+    },
+    {
+      "type": "steps",
+      "title": "验证安装流程",
+      "items": [
+        {
+          "title": "安装插件",
+          "description": "客户端校验包结构并把插件复制到本地 Plugin Store。"
+        },
+        {
+          "title": "查看权限",
+          "description": "通过详情页的权限入口检查 storage.read 声明。"
+        },
+        {
+          "title": "按需授权并启用",
+          "description": "只有用户明确操作后，插件才会获得权限并进入启用状态。"
+        },
+        {
+          "title": "停用或卸载",
+          "description": "验证插件生命周期和本地安装台账能够正确更新。"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## 示例边界\n\n该插件不注册命令、不创建界面，也不执行外部请求。它的唯一目的，是用最少代码验证 GitHub 市场的插件校验、安装、权限、启停与卸载路径。"
+    },
+    {
+      "type": "links",
+      "title": "查看源码",
+      "items": [
+        {
+          "label": "测试市场仓库",
+          "href": "https://github.com/flower0wine/vetta-open-abilities-test"
+        }
+      ]
+    }
+  ]
+}

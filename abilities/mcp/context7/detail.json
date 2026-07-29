@@ -2,41 +2,71 @@
   "schemaVersion": 1,
   "blocks": [
     {
+      "type": "showcase",
+      "showcase": {
+        "template": "chat-over-canvas",
+        "canvas": "docs",
+        "user_prompt": "请根据 Next.js 16 的最新文档，解释缓存行为为什么和旧版本不同。",
+        "assistant_reply": "我会先通过 Context7 定位对应版本的官方文档，再结合迁移说明给出结论和代码示例。"
+      }
+    },
+    {
       "type": "feature-grid",
-      "title": "文档上下文",
+      "title": "让文档成为可验证的上下文",
       "items": [
         {
-          "title": "最新文档",
-          "description": "为 Agent 检索当前版本的库与框架文档。",
-          "icon": "solar:book-2-bold-duotone"
+          "title": "按版本检索",
+          "description": "优先获取与你正在使用的库版本相匹配的文档，减少过时 API 带来的误导。",
+          "icon": "solar:document-bold"
         },
         {
-          "title": "相关示例",
-          "description": "把与问题相关的代码示例加入对话上下文。",
-          "icon": "solar:code-file-bold-duotone"
+          "title": "官方代码示例",
+          "description": "把相关示例直接加入 Agent 上下文，便于解释、实现和排错。",
+          "icon": "solar:code-bold"
+        },
+        {
+          "title": "自然语言定位",
+          "description": "只需说明库名和问题，不必手动在多页文档之间反复搜索。",
+          "icon": "solar:lightbulb-bolt-bold"
+        },
+        {
+          "title": "远程即用",
+          "description": "通过托管的 HTTP MCP 连接，无需在本机安装或维护额外进程。",
+          "icon": "solar:cloud-bold"
         }
       ]
+    },
+    {
+      "type": "callout",
+      "tone": "info",
+      "title": "API Key 是可选项",
+      "content": "不填写也可以使用公共服务；填写 Context7 API Key 后可以使用账号额度。凭据只会写入本机 MCP 配置。"
     },
     {
       "type": "steps",
-      "title": "使用方式",
+      "title": "三步开始使用",
       "items": [
         {
-          "title": "安装能力",
-          "description": "无需本地进程，直接连接 Context7 HTTP MCP。"
+          "title": "安装 Context7",
+          "description": "Vetta 会创建远程 HTTP MCP 配置，不会下载或启动本地服务。"
         },
         {
-          "title": "可选填写 API Key",
-          "description": "没有 Key 也可以使用公共服务；填写后可使用账号额度。"
+          "title": "按需填写 API Key",
+          "description": "如果已有 Context7 账号，可在安装或配置时填写 Key；否则直接跳过。"
         },
         {
-          "title": "询问库的用法",
-          "description": "告诉 Agent 库名、版本和需要解决的问题。"
+          "title": "在问题中说明版本",
+          "description": "提供包名、版本和目标任务，让 Agent 检索更精确的资料。"
         }
       ]
     },
     {
+      "type": "markdown",
+      "content": "## 适合这些任务\n\n- 迁移到新的框架或 SDK 版本\n- 核对配置项、函数签名和弃用行为\n- 为当前依赖版本生成可运行示例\n- 判断回答是否引用了过时文档\n\n> Context7 提供文档上下文，不会替代项目内的代码、锁文件和实际运行结果。重要变更仍应结合本地代码与测试验证。"
+    },
+    {
       "type": "links",
+      "title": "了解更多",
       "items": [
         {
           "label": "Context7 文档",

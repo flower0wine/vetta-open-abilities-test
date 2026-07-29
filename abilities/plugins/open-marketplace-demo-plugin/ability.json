@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "type": "plugin",
+  "slug": "open-marketplace-demo-plugin",
+  "version": "1.0.0",
+  "icon": "solar:widget-2-bold",
+  "detail": {
+    "format": "blocks",
+    "path": "detail.json",
+    "fallback": "README.md",
+    "meta": [
+      {
+        "key": "repository",
+        "value": "https://github.com/flower0wine/vetta-open-abilities-test"
+      },
+      {
+        "key": "license",
+        "value": "MIT"
+      },
+      {
+        "label": "Plugin API",
+        "value": "1.1.0"
+      }
+    ]
+  }
+}

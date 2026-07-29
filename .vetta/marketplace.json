@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "name": "vetta-open-abilities-test",
   "displayName": "Vetta Open Abilities Test",
-  "marketplaceVersion": "2026.07.9",
+  "marketplaceVersion": "2026.07.10",
   "repository": "https://github.com/flower0wine/vetta-open-abilities-test",
   "minAppVersion": "0.5.20",
   "abilities": [
@@ -20,15 +20,6 @@
         "example",
         "open-source"
       ],
-      "detail": {
-        "content": "# Hello Vetta\n\nThis ability verifies the open marketplace end-to-end path.",
-        "meta": [
-          {
-            "key": "license",
-            "value": "MIT"
-          }
-        ]
-      },
       "source": {
         "path": "abilities/skills/hello-vetta"
       }
@@ -47,9 +38,6 @@
         "review",
         "code"
       ],
-      "detail": {
-        "content": "# Open Code Review\n\nReview changes by severity, cite concrete files, and report verification results."
-      },
       "source": {
         "path": "abilities/scenes/open-code-review"
       }
@@ -69,9 +57,6 @@
         "plugin",
         "open-source"
       ],
-      "detail": {
-        "content": "# Open Marketplace Demo Plugin\n\nThis plugin verifies package validation and installation through the GitHub marketplace."
-      },
       "source": {
         "path": "abilities/plugins/open-marketplace-demo-plugin"
       }
@@ -195,8 +180,8 @@
         "bundle",
         "open-source"
       ],
-      "detail": {
-        "content": "# Open Marketplace Starter\n\nInstalls the complete set of test abilities from this repository."
+      "source": {
+        "path": "abilities/bundles/open-marketplace-starter"
       },
       "config": {
         "members": [

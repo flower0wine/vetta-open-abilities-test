@@ -2,54 +2,78 @@
   "schemaVersion": 1,
   "blocks": [
     {
+      "type": "showcase",
+      "showcase": {
+        "template": "chat-over-canvas",
+        "canvas": "code",
+        "user_prompt": "检查这个 Pull Request 的变更，并找出会影响发布的风险。",
+        "assistant_reply": "我会读取 PR、关联 Issue 和变更文件，按严重程度列出发现，并标明仍需验证的部分。"
+      }
+    },
+    {
       "type": "feature-grid",
-      "title": "可用能力",
+      "title": "把 GitHub 工作流带入对话",
       "items": [
         {
           "title": "仓库与代码",
-          "description": "查看仓库内容、分支、提交，并搜索代码。",
-          "icon": "solar:code-square-bold-duotone"
+          "description": "读取目录、文件、分支和提交，并在有权限的仓库中搜索代码。",
+          "icon": "solar:code-bold"
         },
         {
-          "title": "Issue 与 Pull Request",
-          "description": "读取问题、讨论和变更，辅助审查 Pull Request。",
-          "icon": "solar:git-pull-request-bold-duotone"
-        }
-      ]
-    },
-    {
-      "type": "steps",
-      "title": "连接方式",
-      "items": [
-        {
-          "title": "创建 Personal Access Token",
-          "description": "只授予完成任务实际需要的仓库权限。"
+          "title": "Issue 协作",
+          "description": "查询问题上下文、评论和状态，辅助归纳需求与跟踪处理进度。",
+          "icon": "solar:chat-round-bold"
         },
         {
-          "title": "安装并填写 Token",
-          "description": "Vetta 会把凭据写入本机 MCP 配置。"
+          "title": "Pull Request 审查",
+          "description": "结合变更、讨论和关联内容分析风险，形成结构化审查意见。",
+          "icon": "solar:layers-bold"
         },
         {
-          "title": "开始使用",
-          "description": "向 Agent 提供仓库、Issue 或 Pull Request 链接。"
+          "title": "跨仓库检索",
+          "description": "在 Token 授权范围内定位实现、配置和历史变更。",
+          "icon": "solar:global-bold"
         }
       ]
     },
     {
       "type": "callout",
       "tone": "warning",
-      "title": "最小权限",
-      "content": "Token 不会保存在本仓库中。建议使用细粒度 Token，并限制可访问的仓库。"
+      "title": "从最小权限开始",
+      "content": "建议使用细粒度 Personal Access Token，只授权任务所需的仓库和权限。Token 不会进入市场仓库，只保存在你的本机 MCP 配置中。"
+    },
+    {
+      "type": "steps",
+      "title": "连接 GitHub",
+      "items": [
+        {
+          "title": "创建细粒度 Token",
+          "description": "选择明确的仓库范围，并仅启用读取或操作所必需的权限。"
+        },
+        {
+          "title": "安装并填写 Token",
+          "description": "Vetta 会自动补充 Bearer 前缀并写入本机 HTTP MCP 请求头。"
+        },
+        {
+          "title": "提供工作对象",
+          "description": "在对话中给出仓库、Issue 或 Pull Request 链接，并说明期望的结果。"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## 可以怎样使用\n\n- 汇总某个 Issue 的背景、决策与待办\n- 审查 Pull Request 并引用具体变更\n- 追踪某段实现由哪个提交引入\n- 在多个仓库中查找相同配置或 API 用法\n\n## 权限边界\n\n实际可见和可执行的操作取决于 Token 权限、仓库策略以及 GitHub MCP 服务本身。涉及写入时，请在执行前明确目标和影响范围。"
     },
     {
       "type": "links",
+      "title": "相关资源",
       "items": [
         {
           "label": "GitHub MCP 文档",
           "href": "https://docs.github.com/en/copilot/customizing-copilot/extending-copilot-chat-with-mcp"
         },
         {
-          "label": "创建 Token",
+          "label": "创建细粒度 Token",
           "href": "https://github.com/settings/personal-access-tokens"
         }
       ]

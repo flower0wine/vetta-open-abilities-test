@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "blocks": [
+    {
+      "type": "showcase",
+      "showcase": {
+        "template": "chat-over-canvas",
+        "canvas": "code",
+        "user_prompt": "审查当前改动，优先告诉我会导致错误或回归的问题。",
+        "assistant_reply": "我会先列出按严重程度排序的具体发现，引用受影响的文件和行为，再说明验证结果与剩余风险。"
+      }
+    },
+    {
+      "type": "feature-grid",
+      "title": "围绕可行动的发现组织审查",
+      "items": [
+        {
+          "title": "风险优先",
+          "description": "先检查正确性、安全性和回归风险，而不是从代码风格开始。",
+          "icon": "solar:shield-bold"
+        },
+        {
+          "title": "具体定位",
+          "description": "引用受影响的文件和实际行为，让每条发现都可以直接处理。",
+          "icon": "solar:map-point-bold"
+        },
+        {
+          "title": "验证透明",
+          "description": "明确列出已经执行的检查、测试结果以及尚未覆盖的部分。",
+          "icon": "solar:document-bold"
+        },
+        {
+          "title": "结论克制",
+          "description": "摘要保持简短，把篇幅留给证据、影响和修复方向。",
+          "icon": "solar:layers-bold"
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "审查顺序",
+      "items": [
+        {
+          "title": "理解目标和差异",
+          "description": "确认改动要解决的问题，并检查实际变更范围。"
+        },
+        {
+          "title": "寻找高影响风险",
+          "description": "重点检查错误路径、边界条件、权限、安全与兼容性。"
+        },
+        {
+          "title": "执行针对性验证",
+          "description": "运行与发现相关的测试或静态检查，并记录结果。"
+        },
+        {
+          "title": "输出发现和缺口",
+          "description": "按严重程度呈现问题，同时说明仍无法确认的内容。"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "tone": "info",
+      "title": "不会为了凑数量制造问题",
+      "content": "如果没有发现明确缺陷，审查结果会直接说明，并列出验证范围和仍可能存在的测试缺口。"
+    },
+    {
+      "type": "markdown",
+      "content": "## 适用范围\n\n适合功能修改、缺陷修复、重构和配置变更的代码审查。对于大规模架构评审，建议同时提供设计目标、约束条件和迁移方案。\n\n## 输出重点\n\n每条发现应包含问题位置、触发条件、用户或系统影响，以及可以验证的修复方向。"
+    },
+    {
+      "type": "links",
+      "title": "查看源码",
+      "items": [
+        {
+          "label": "测试市场仓库",
+          "href": "https://github.com/flower0wine/vetta-open-abilities-test"
+        }
+      ]
+    }
+  ]
+}

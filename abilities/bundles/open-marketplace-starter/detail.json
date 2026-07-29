@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "blocks": [
+    {
+      "type": "showcase",
+      "showcase": {
+        "template": "chat-over-canvas",
+        "canvas": "generic",
+        "user_prompt": "我只想验证 Skill、代码审查场景和 Context7，不需要测试插件。",
+        "assistant_reply": "打开套装安装窗口后只勾选这三个成员即可；Bundle 不要求一次安装全部能力。"
+      }
+    },
+    {
+      "type": "feature-grid",
+      "title": "一组可选择安装的市场样例",
+      "items": [
+        {
+          "title": "Hello Vetta Skill",
+          "description": "验证 GitHub Skill 的同步、安装和调用。",
+          "icon": "solar:magic-stick-3-bold"
+        },
+        {
+          "title": "Open Code Review",
+          "description": "验证 Scene 安装以及风险优先的代码审查流程。",
+          "icon": "solar:code-bold"
+        },
+        {
+          "title": "Demo Plugin",
+          "description": "验证插件包校验、权限、启停和卸载。",
+          "icon": "solar:widget-2-bold"
+        },
+        {
+          "title": "Context7 MCP",
+          "description": "验证远程 MCP 安装、可选参数和配置流程。",
+          "icon": "solar:server-bold"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "tone": "info",
+      "title": "Bundle 本身不是安装产物",
+      "content": "安装和卸载时都会列出成员供你选择。每个成员仍使用自己的版本、权限和配置流程，未勾选的能力不会发生变化。"
+    },
+    {
+      "type": "steps",
+      "title": "按需批量安装",
+      "items": [
+        {
+          "title": "查看成员状态",
+          "description": "详情页会展示套装成员以及当前是否已安装。"
+        },
+        {
+          "title": "选择需要的能力",
+          "description": "在安装窗口中取消不需要的成员，不强制全选。"
+        },
+        {
+          "title": "逐项完成安全配置",
+          "description": "MCP 参数和 Plugin 权限仍通过各自的受控流程处理。"
+        },
+        {
+          "title": "独立维护成员",
+          "description": "安装后可以单独升级、停用或卸载任意成员。"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## 为什么使用 Bundle\n\nBundle 适合把同一工作流需要的多种能力放在一个入口中，同时保留用户的最终选择权。它不会把成员合并成不可拆分的黑盒，也不会绕过成员自己的安全确认。\n\n这个 Starter 套装专门用于覆盖 GitHub 市场目前支持的 Skill、Scene、Plugin 和 MCP 四种可安装能力。"
+    },
+    {
+      "type": "links",
+      "title": "查看完整市场",
+      "items": [
+        {
+          "label": "测试市场仓库",
+          "href": "https://github.com/flower0wine/vetta-open-abilities-test"
+        }
+      ]
+    }
+  ]
+}

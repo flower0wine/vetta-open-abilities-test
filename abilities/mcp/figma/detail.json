@@ -2,54 +2,78 @@
   "schemaVersion": 1,
   "blocks": [
     {
+      "type": "showcase",
+      "showcase": {
+        "template": "chat-over-canvas",
+        "canvas": "design",
+        "user_prompt": "读取这个 Figma 页面，帮我实现响应式的设置面板，并复用项目现有组件。",
+        "assistant_reply": "我会先解析页面结构、组件和样式信息，再对照代码库的设计系统制定实现方案。"
+      }
+    },
+    {
       "type": "feature-grid",
-      "title": "设计上下文",
+      "title": "让设计上下文可以被 Agent 使用",
       "items": [
         {
-          "title": "读取设计文件",
-          "description": "通过 Figma API 获取页面、图层和组件信息。",
-          "icon": "solar:layers-bold-duotone"
+          "title": "页面与图层",
+          "description": "读取 Figma 文件中的页面、Frame、图层和层级关系。",
+          "icon": "solar:layers-bold"
         },
         {
-          "title": "辅助实现界面",
-          "description": "把设计结构作为 Agent 编写与审查界面代码的上下文。",
-          "icon": "solar:palette-bold-duotone"
+          "title": "组件信息",
+          "description": "识别组件、实例与属性，为代码组件映射提供更完整的上下文。",
+          "icon": "solar:widget-2-bold"
+        },
+        {
+          "title": "视觉属性",
+          "description": "获取颜色、文字、尺寸和布局数据，辅助还原设计意图。",
+          "icon": "solar:gallery-bold"
+        },
+        {
+          "title": "实现与审查",
+          "description": "结合现有代码库生成实现方案，或检查界面与设计之间的差异。",
+          "icon": "solar:code-bold"
         }
       ]
     },
     {
       "type": "callout",
-      "tone": "info",
-      "title": "运行要求",
-      "content": "本能力在本机通过 npx 启动社区维护的 figma-developer-mcp，需要 Node.js 和 Figma Personal Access Token。"
+      "tone": "warning",
+      "title": "本机运行要求",
+      "content": "该能力通过 npx 在本机启动社区维护的 figma-developer-mcp。使用前需要安装 Node.js，并准备 Figma Personal Access Token。"
     },
     {
       "type": "steps",
-      "title": "开始使用",
+      "title": "连接 Figma",
       "items": [
         {
-          "title": "创建 Figma Token",
-          "description": "在 Figma 设置中创建 Personal Access Token。"
+          "title": "创建 Personal Access Token",
+          "description": "在 Figma 设置中创建 Token，并按团队安全要求妥善保管。"
         },
         {
           "title": "安装并填写 Token",
-          "description": "Vetta 会在本机保存 MCP 环境变量配置。"
+          "description": "Vetta 会把凭据作为环境变量写入本机 MCP 配置。"
         },
         {
-          "title": "提供设计链接",
-          "description": "向 Agent 提供 Figma 文件链接或 File Key。"
+          "title": "提供文件链接或 File Key",
+          "description": "在对话中指出目标页面、Frame 和要完成的实现任务。"
         }
       ]
     },
     {
+      "type": "markdown",
+      "content": "## 从设计到代码\n\nFigma 数据适合帮助 Agent 理解结构和设计意图，但最终实现仍应遵循当前项目的组件库、设计 token、响应式规则和无障碍要求。\n\n**建议在提示中同时提供：**\n\n1. Figma 文件链接与目标 Frame\n2. 对应的代码目录或现有组件\n3. 需要保持的交互和适配范围\n4. 验收标准与截图尺寸"
+    },
+    {
       "type": "links",
+      "title": "项目与配置",
       "items": [
         {
           "label": "开源仓库",
           "href": "https://github.com/GLips/Figma-Context-MCP"
         },
         {
-          "label": "Token 文档",
+          "label": "Figma Token 文档",
           "href": "https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens"
         }
       ]
