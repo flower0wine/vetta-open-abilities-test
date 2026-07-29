@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "name": "vetta-open-abilities-test",
   "displayName": "Vetta Open Abilities Test",
-  "marketplaceVersion": "2026.07.8",
+  "marketplaceVersion": "2026.07.9",
   "repository": "https://github.com/flower0wine/vetta-open-abilities-test",
   "minAppVersion": "0.5.20",
   "abilities": [
