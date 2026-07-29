@@ -1,4 +1,4 @@
-# Context7 MCP
+# Context7 文档助手
 
 通过 Context7 HTTP MCP 为 Agent 提供当前版本的库文档和相关代码示例。
 

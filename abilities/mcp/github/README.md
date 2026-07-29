@@ -1,4 +1,4 @@
-# GitHub MCP
+# GitHub 协作助手
 
 通过 GitHub 托管的 MCP 服务连接仓库、Issue、Pull Request 与代码搜索。
 

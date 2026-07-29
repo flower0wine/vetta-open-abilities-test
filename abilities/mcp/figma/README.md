@@ -1,4 +1,4 @@
-# Figma MCP
+# Figma 设计助手
 
 在本机运行社区维护的 `figma-developer-mcp`，通过 Figma API 为 Agent 提供设计上下文。
 

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "name": "vetta-open-abilities-test",
   "displayName": "Vetta Open Abilities Test",
-  "marketplaceVersion": "2026.07.10",
+  "marketplaceVersion": "2026.07.11",
   "repository": "https://github.com/flower0wine/vetta-open-abilities-test",
   "minAppVersion": "0.5.20",
   "abilities": [
@@ -10,7 +10,7 @@
       "type": "skill",
       "slug": "hello-vetta",
       "name": "Hello Vetta",
-      "description": "A minimal open skill used to verify GitHub marketplace synchronization and installation.",
+      "description": "A minimal open ability used to verify GitHub marketplace synchronization and installation.",
       "version": "1.0.0",
       "configVersion": 1,
       "license": "MIT",
@@ -20,6 +20,14 @@
         "example",
         "open-source"
       ],
+      "detail": {
+        "i18n": {
+          "zh": {
+            "name": "Hello Vetta",
+            "description": "用于验证 GitHub 市场同步、安装与调用流程的最小开源能力。"
+          }
+        }
+      },
       "source": {
         "path": "abilities/skills/hello-vetta"
       }
@@ -28,7 +36,7 @@
       "type": "scene",
       "slug": "open-code-review",
       "name": "Open Code Review",
-      "description": "A small scene for reviewing code with explicit findings and verification steps.",
+      "description": "A focused workflow for reviewing code with explicit findings and verification steps.",
       "version": "1.0.0",
       "configVersion": 1,
       "license": "MIT",
@@ -38,6 +46,14 @@
         "review",
         "code"
       ],
+      "detail": {
+        "i18n": {
+          "zh": {
+            "name": "代码审查",
+            "description": "按照风险优先顺序检查代码，并给出明确发现与验证结果。"
+          }
+        }
+      },
       "source": {
         "path": "abilities/scenes/open-code-review"
       }
@@ -45,8 +61,8 @@
     {
       "type": "plugin",
       "slug": "open-marketplace-demo-plugin",
-      "name": "Open Marketplace Demo Plugin",
-      "description": "A minimal disabled-by-default plugin used to verify GitHub marketplace installation.",
+      "name": "Extension Safety Demo",
+      "description": "A minimal disabled-by-default extension used to verify safe GitHub marketplace installation.",
       "version": "1.0.0",
       "configVersion": 1,
       "license": "MIT",
@@ -54,9 +70,17 @@
       "category": "Examples",
       "tags": [
         "example",
-        "plugin",
+        "extension",
         "open-source"
       ],
+      "detail": {
+        "i18n": {
+          "zh": {
+            "name": "扩展安全示例",
+            "description": "用于验证安全安装、权限授权、启停与卸载流程的最小扩展。"
+          }
+        }
+      },
       "source": {
         "path": "abilities/plugins/open-marketplace-demo-plugin"
       }
@@ -64,8 +88,8 @@
     {
       "type": "mcp",
       "slug": "context7",
-      "name": "Context7 MCP",
-      "description": "Retrieves current library documentation and code examples through the open Context7 MCP server.",
+      "name": "Context7 Docs",
+      "description": "Retrieves current library documentation and relevant code examples through Context7.",
       "version": "1.1.0",
       "configVersion": 1,
       "license": "MIT",
@@ -73,9 +97,17 @@
       "category": "Development",
       "tags": [
         "documentation",
-        "mcp",
+        "current-docs",
         "open-source"
       ],
+      "detail": {
+        "i18n": {
+          "zh": {
+            "name": "Context7 文档助手",
+            "description": "检索当前版本的库文档与相关代码示例。"
+          }
+        }
+      },
       "source": {
         "path": "abilities/mcp/context7"
       }
@@ -83,8 +115,8 @@
     {
       "type": "mcp",
       "slug": "github",
-      "name": "GitHub MCP",
-      "description": "Connects Vetta to GitHub repositories, issues, pull requests, and code search through GitHub's hosted MCP endpoint.",
+      "name": "GitHub Assistant",
+      "description": "Connects Vetta to GitHub repositories, issues, pull requests, and code search through GitHub's hosted service.",
       "version": "1.0.0",
       "configVersion": 1,
       "license": "",
@@ -94,13 +126,13 @@
         "github",
         "repositories",
         "pull-requests",
-        "mcp"
+        "code-search"
       ],
       "detail": {
         "i18n": {
           "zh": {
-            "name": "GitHub MCP",
-            "description": "通过 GitHub 托管的 MCP 服务连接仓库、Issue、Pull Request 与代码搜索。"
+            "name": "GitHub 协作助手",
+            "description": "连接 GitHub 仓库、Issue、Pull Request 与代码搜索。"
           }
         }
       },
@@ -111,8 +143,8 @@
     {
       "type": "mcp",
       "slug": "notion",
-      "name": "Notion MCP",
-      "description": "Connects Vetta to the official Notion MCP service with browser-based OAuth authorization.",
+      "name": "Notion Knowledge",
+      "description": "Connects Vetta to the official Notion service with browser-based authorization.",
       "version": "1.0.0",
       "configVersion": 1,
       "license": "",
@@ -123,13 +155,13 @@
         "documents",
         "knowledge-base",
         "oauth",
-        "mcp"
+        "workspace"
       ],
       "detail": {
         "i18n": {
           "zh": {
-            "name": "Notion MCP",
-            "description": "通过浏览器 OAuth 授权连接 Notion 官方 MCP 服务。"
+            "name": "Notion 知识助手",
+            "description": "通过浏览器授权连接 Notion 页面、数据库与知识内容。"
           }
         }
       },
@@ -140,8 +172,8 @@
     {
       "type": "mcp",
       "slug": "figma",
-      "name": "Figma MCP",
-      "description": "Runs the community Figma Developer MCP server locally so Vetta can inspect Figma design data with a personal access token.",
+      "name": "Figma Design Assistant",
+      "description": "Runs a community Figma integration locally so Vetta can inspect design data with a personal access token.",
       "version": "1.0.0",
       "configVersion": 1,
       "license": "MIT",
@@ -150,14 +182,14 @@
       "tags": [
         "figma",
         "design",
-        "stdio",
-        "mcp"
+        "components",
+        "design-context"
       ],
       "detail": {
         "i18n": {
           "zh": {
-            "name": "Figma MCP",
-            "description": "在本机运行社区版 Figma Developer MCP，并通过 Personal Access Token 读取设计数据。"
+            "name": "Figma 设计助手",
+            "description": "在本机连接 Figma，并通过 Personal Access Token 读取设计上下文。"
           }
         }
       },
@@ -168,8 +200,8 @@
     {
       "type": "bundle",
       "slug": "open-marketplace-starter",
-      "name": "Open Marketplace Starter",
-      "description": "A bundle containing one skill, one scene, one plugin, and one MCP server from this repository.",
+      "name": "Open Abilities Starter",
+      "description": "A selectable collection for trying greetings, code review, extension safety, and current documentation.",
       "version": "1.2.0",
       "configVersion": 1,
       "license": "MIT",
@@ -177,9 +209,17 @@
       "category": "Examples",
       "tags": [
         "example",
-        "bundle",
+        "collection",
         "open-source"
       ],
+      "detail": {
+        "i18n": {
+          "zh": {
+            "name": "开源能力入门套装",
+            "description": "可选择安装问候、代码审查、扩展安全和文档检索能力。"
+          }
+        }
+      },
       "source": {
         "path": "abilities/bundles/open-marketplace-starter"
       },

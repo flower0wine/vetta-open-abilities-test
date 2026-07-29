@@ -6,8 +6,8 @@
       "showcase": {
         "template": "chat-over-canvas",
         "canvas": "generic",
-        "user_prompt": "我只想验证 Skill、代码审查场景和 Context7，不需要测试插件。",
-        "assistant_reply": "打开套装安装窗口后只勾选这三个成员即可；Bundle 不要求一次安装全部能力。"
+        "user_prompt": "我只想验证 Hello Vetta、代码审查和 Context7，不需要扩展安全示例。",
+        "assistant_reply": "打开套装安装窗口后只勾选这三个成员即可；这个套装不要求一次安装全部能力。"
       }
     },
     {
@@ -15,23 +15,23 @@
       "title": "一组可选择安装的市场样例",
       "items": [
         {
-          "title": "Hello Vetta Skill",
-          "description": "验证 GitHub Skill 的同步、安装和调用。",
+          "title": "Hello Vetta",
+          "description": "验证 GitHub 能力的同步、安装和调用。",
           "icon": "solar:magic-stick-3-bold"
         },
         {
           "title": "Open Code Review",
-          "description": "验证 Scene 安装以及风险优先的代码审查流程。",
+          "description": "验证安装以及风险优先的代码审查流程。",
           "icon": "solar:code-bold"
         },
         {
-          "title": "Demo Plugin",
-          "description": "验证插件包校验、权限、启停和卸载。",
+          "title": "扩展安全示例",
+          "description": "验证扩展包校验、权限、启停和卸载。",
           "icon": "solar:widget-2-bold"
         },
         {
-          "title": "Context7 MCP",
-          "description": "验证远程 MCP 安装、可选参数和配置流程。",
+          "title": "Context7 文档助手",
+          "description": "验证远程服务安装、可选参数和配置流程。",
           "icon": "solar:server-bold"
         }
       ]
@@ -39,7 +39,7 @@
     {
       "type": "callout",
       "tone": "info",
-      "title": "Bundle 本身不是安装产物",
+      "title": "套装只是选择入口",
       "content": "安装和卸载时都会列出成员供你选择。每个成员仍使用自己的版本、权限和配置流程，未勾选的能力不会发生变化。"
     },
     {
@@ -56,7 +56,7 @@
         },
         {
           "title": "逐项完成安全配置",
-          "description": "MCP 参数和 Plugin 权限仍通过各自的受控流程处理。"
+          "description": "服务参数和扩展权限仍通过各自的受控流程处理。"
         },
         {
           "title": "独立维护成员",
@@ -66,7 +66,7 @@
     },
     {
       "type": "markdown",
-      "content": "## 为什么使用 Bundle\n\nBundle 适合把同一工作流需要的多种能力放在一个入口中，同时保留用户的最终选择权。它不会把成员合并成不可拆分的黑盒，也不会绕过成员自己的安全确认。\n\n这个 Starter 套装专门用于覆盖 GitHub 市场目前支持的 Skill、Scene、Plugin 和 MCP 四种可安装能力。"
+      "content": "## 为什么使用套装\n\n套装适合把同一工作流需要的多种能力放在一个入口中，同时保留用户的最终选择权。它不会把成员合并成不可拆分的黑盒，也不会绕过成员自己的安全确认。\n\n这个入门套装覆盖问候、代码审查、扩展安全和文档检索四类可安装能力。"
     },
     {
       "type": "links",

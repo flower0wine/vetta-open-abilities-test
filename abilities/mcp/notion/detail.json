@@ -47,7 +47,7 @@
       "title": "完成授权",
       "items": [
         {
-          "title": "安装 Notion MCP",
+          "title": "安装 Notion 知识助手",
           "description": "Vetta 会添加 Notion 官方托管的 HTTP MCP 服务。"
         },
         {

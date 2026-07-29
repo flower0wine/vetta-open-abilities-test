@@ -1,4 +1,4 @@
-# Notion MCP
+# Notion 知识助手
 
 通过 Notion 官方托管的 MCP 服务连接你授权的页面与数据库。
 

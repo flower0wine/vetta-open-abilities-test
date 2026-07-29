@@ -11,7 +11,7 @@
     },
     {
       "type": "feature-grid",
-      "title": "用于验证 Plugin 安全链路",
+      "title": "用于验证扩展安全链路",
       "items": [
         {
           "title": "安装后默认禁用",

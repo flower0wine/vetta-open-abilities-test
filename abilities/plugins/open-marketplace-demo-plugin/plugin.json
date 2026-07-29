@@ -1,10 +1,10 @@
 {
   "id": "open-marketplace-demo-plugin",
-  "name": "Open Marketplace Demo Plugin",
+  "name": "Extension Safety Demo",
   "version": "1.0.0",
   "pluginApiVersion": "1.1.0",
   "entry": "dist/index.js",
-  "description": "A minimal plugin used to verify GitHub marketplace installation.",
+  "description": "A minimal extension used to verify safe GitHub marketplace installation.",
   "author": "Vetta",
   "permissions": ["storage.read"]
 }

@@ -1,4 +1,4 @@
-# Open Marketplace Demo Plugin
+# 扩展安全示例
 
 一个最小的 GitHub 市场插件，用于验证包校验、安装、权限授权、启停和卸载流程。
 
