@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "blocks": [
+    {
+      "type": "feature-grid",
+      "title": "设计上下文",
+      "items": [
+        {
+          "title": "读取设计文件",
+          "description": "通过 Figma API 获取页面、图层和组件信息。",
+          "icon": "solar:layers-bold-duotone"
+        },
+        {
+          "title": "辅助实现界面",
+          "description": "把设计结构作为 Agent 编写与审查界面代码的上下文。",
+          "icon": "solar:palette-bold-duotone"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "tone": "info",
+      "title": "运行要求",
+      "content": "本能力在本机通过 npx 启动社区维护的 figma-developer-mcp，需要 Node.js 和 Figma Personal Access Token。"
+    },
+    {
+      "type": "steps",
+      "title": "开始使用",
+      "items": [
+        {
+          "title": "创建 Figma Token",
+          "description": "在 Figma 设置中创建 Personal Access Token。"
+        },
+        {
+          "title": "安装并填写 Token",
+          "description": "Vetta 会在本机保存 MCP 环境变量配置。"
+        },
+        {
+          "title": "提供设计链接",
+          "description": "向 Agent 提供 Figma 文件链接或 File Key。"
+        }
+      ]
+    },
+    {
+      "type": "links",
+      "items": [
+        {
+          "label": "开源仓库",
+          "href": "https://github.com/GLips/Figma-Context-MCP"
+        },
+        {
+          "label": "Token 文档",
+          "href": "https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens"
+        }
+      ]
+    }
+  ]
+}

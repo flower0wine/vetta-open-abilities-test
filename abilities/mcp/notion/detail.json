@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "blocks": [
+    {
+      "type": "feature-grid",
+      "title": "工作区能力",
+      "items": [
+        {
+          "title": "搜索与读取",
+          "description": "查找并读取你授权的页面、数据库和知识内容。",
+          "icon": "solar:magnifer-bold-duotone"
+        },
+        {
+          "title": "总结与更新",
+          "description": "让 Agent 总结内容，或在授权范围内更新页面。",
+          "icon": "solar:document-add-bold-duotone"
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "OAuth 授权",
+      "items": [
+        {
+          "title": "安装能力",
+          "description": "安装后 Vetta 会打开 Notion 浏览器授权页面。"
+        },
+        {
+          "title": "选择允许访问的内容",
+          "description": "登录 Notion，并明确选择工作区和页面范围。"
+        },
+        {
+          "title": "在 Agent 中使用",
+          "description": "让 Agent 查找、总结或更新已授权的 Notion 内容。"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "tone": "success",
+      "title": "无需 Integration Secret",
+      "content": "访问权限由 Notion OAuth 管理，可以在之后撤销。"
+    },
+    {
+      "type": "links",
+      "items": [
+        {
+          "label": "Notion MCP 文档",
+          "href": "https://developers.notion.com/guides/mcp/get-started-with-mcp"
+        }
+      ]
+    }
+  ]
+}

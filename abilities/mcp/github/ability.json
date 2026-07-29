@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "type": "mcp",
+  "slug": "github",
+  "version": "1.0.0",
+  "icon": "assets/icon.svg",
+  "detail": {
+    "format": "blocks",
+    "path": "detail.json",
+    "fallback": "README.md",
+    "meta": [
+      {
+        "key": "docs",
+        "value": "https://docs.github.com/en/copilot/customizing-copilot/extending-copilot-chat-with-mcp"
+      },
+      {
+        "key": "homepage",
+        "value": "https://github.com/settings/personal-access-tokens"
+      }
+    ]
+  }
+}
