@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "name": "vetta-open-abilities-test",
   "displayName": "Vetta Open Abilities Test",
-  "marketplaceVersion": "2026.07.11",
+  "marketplaceVersion": "2026.08.01",
   "repository": "https://github.com/flower0wine/vetta-open-abilities-test",
   "minAppVersion": "0.5.20",
   "abilities": [
@@ -30,32 +30,6 @@
       },
       "source": {
         "path": "abilities/skills/hello-vetta"
-      }
-    },
-    {
-      "type": "scene",
-      "slug": "open-code-review",
-      "name": "Open Code Review",
-      "description": "A focused workflow for reviewing code with explicit findings and verification steps.",
-      "version": "1.0.0",
-      "configVersion": 1,
-      "license": "MIT",
-      "author": "Vetta",
-      "category": "Development",
-      "tags": [
-        "review",
-        "code"
-      ],
-      "detail": {
-        "i18n": {
-          "zh": {
-            "name": "代码审查",
-            "description": "按照风险优先顺序检查代码，并给出明确发现与验证结果。"
-          }
-        }
-      },
-      "source": {
-        "path": "abilities/scenes/open-code-review"
       }
     },
     {
@@ -201,7 +175,7 @@
       "type": "bundle",
       "slug": "open-marketplace-starter",
       "name": "Open Abilities Starter",
-      "description": "A selectable collection for trying greetings, code review, extension safety, and current documentation.",
+      "description": "A selectable collection for trying greetings, extension safety, and current documentation.",
       "version": "1.2.0",
       "configVersion": 1,
       "license": "MIT",
@@ -216,7 +190,7 @@
         "i18n": {
           "zh": {
             "name": "开源能力入门套装",
-            "description": "可选择安装问候、代码审查、扩展安全和文档检索能力。"
+            "description": "可选择安装问候、扩展安全和文档检索能力。"
           }
         }
       },
@@ -228,10 +202,6 @@
           {
             "type": "skill",
             "slug": "hello-vetta"
-          },
-          {
-            "type": "scene",
-            "slug": "open-code-review"
           },
           {
             "type": "plugin",
