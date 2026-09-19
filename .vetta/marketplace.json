@@ -2,7 +2,7 @@
   "schemaVersion": 3,
   "name": "vetta-open-abilities-test",
   "displayName": "Vetta Open Abilities Test",
-  "marketplaceVersion": "2026.09.19-6",
+  "marketplaceVersion": "2026.09.19-7",
   "repository": "https://github.com/flower0wine/vetta-open-abilities-test",
   "minAppVersion": "0.5.59",
   "abilities": [
@@ -261,7 +261,7 @@
           "commands": [],
           "artifact": {
             "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-cli-proxy-api-1.10.2/cli-proxy-api-1.10.2.zip",
-            "sha256": "d2590f25b82a43aa5061d211a82dfa342e1041b2b11ad36a7d651b32c42e3399"
+            "sha256": "a52da53ab1c4f861b0ae834e335eec002f9d1242aa9c18a1f9847a8b12608e42"
           }
         }
       ]
@@ -401,7 +401,7 @@
           "commands": [],
           "artifact": {
             "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-xiaohongshu-1.1.22/xiaohongshu-1.1.22.zip",
-            "sha256": "67ee40d02052db151f9d18ec79825a5a857463f0b970147ffdb53e514bfe4e05"
+            "sha256": "ab26f46f2be7fa86eb39d7f4d97139c1ffe06cff0283ab031b2df943433868ba"
           }
         }
       ]
