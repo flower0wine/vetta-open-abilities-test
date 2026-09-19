@@ -2,8 +2,12 @@
   "id": "open-marketplace-demo-plugin",
   "name": "Extension Safety Demo",
   "version": "1.0.0",
-  "pluginApiVersion": "1.1.0",
+  "pluginApiVersion": "^2.5.0",
   "entry": "dist/index.js",
+  "moduleFederation": {
+    "remoteName": "open_marketplace_demo_plugin",
+    "expose": "./plugin"
+  },
   "description": "A minimal extension used to verify safe GitHub marketplace installation.",
   "author": "Vetta",
   "permissions": ["storage.read"]

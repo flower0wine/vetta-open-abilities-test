@@ -1,0 +1,80 @@
+name: Marketplace v3 test release
+
+on:
+  push:
+    branches: [refa/marketplace-v3]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: marketplace-v3-test-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build the demo plugin
+        run: node scripts/build-demo-plugin.mjs
+
+      - name: Create the deterministic plugin archive
+        run: python3 scripts/stage-plugin-release.py open-marketplace-demo-plugin --min-app-version 0.5.59
+
+      - name: Verify the catalog and archive digest
+        run: node scripts/verify-v3-release.mjs
+
+      - name: Save the verified archive as a workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: open-marketplace-demo-plugin-1.0.0
+          path: .release-artifacts/open-marketplace-demo-plugin-1.0.0.zip
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Publish the immutable test prerelease
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag="plugin-open-marketplace-demo-plugin-1.0.0"
+          asset=".release-artifacts/open-marketplace-demo-plugin-1.0.0.zip"
+          expected="$(sha256sum "$asset" | cut -d' ' -f1)"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            mkdir -p /tmp/existing-release
+            gh release download "$tag" --pattern "$(basename "$asset")" --dir /tmp/existing-release
+            actual="$(sha256sum "/tmp/existing-release/$(basename "$asset")" | cut -d' ' -f1)"
+            test "$actual" = "$expected"
+          else
+            gh release create "$tag" "$asset" \
+              --target "$GITHUB_SHA" \
+              --title "Plugin test: open-marketplace-demo-plugin 1.0.0" \
+              --notes "CI-built prerelease used to verify the Vetta marketplace v3 installation path." \
+              --prerelease \
+              --latest=false
+          fi
+
+      - name: Verify the published asset
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/published-release
+          mkdir -p /tmp/published-release
+          gh release download plugin-open-marketplace-demo-plugin-1.0.0 \
+            --pattern open-marketplace-demo-plugin-1.0.0.zip \
+            --dir /tmp/published-release
+          echo "$(node -p "require('./.vetta/marketplace.json').abilities.find(x => x.slug === 'open-marketplace-demo-plugin').releases[0].artifact.sha256")  /tmp/published-release/open-marketplace-demo-plugin-1.0.0.zip" \
+            | sha256sum --check --strict

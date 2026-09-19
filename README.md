@@ -2,6 +2,8 @@
 
 Public test marketplace for the Vetta desktop application's GitHub ability source.
 
+The `refa/marketplace-v3` branch exercises the schema v3 plugin artifact path. Its workflow builds the demo plugin from source, creates a deterministic ZIP, checks the catalog digest, retains the ZIP as a workflow artifact, and publishes the same bytes as a test prerelease asset.
+
 ## Repository layout
 
 ```text
@@ -25,5 +27,6 @@ abilities/<type>/<slug>/assets/
 - Do not reuse one slug across skill and scene.
 - Keep installation configuration in `mcp.json` / `plugin.json` and presentation resources in the same package's `ability.json`, detail file, and assets.
 - Compose detail pages from the host-rendered block whitelist; never add executable HTML, JavaScript, CSS, iframe content, or custom actions.
+- Keep plugin build output and release ZIPs out of Git. The v3 catalog references immutable release assets by version and SHA-256.
 
 Brand SVGs are sourced from Simple Icons (CC0); product names and trademarks belong to their respective owners.
