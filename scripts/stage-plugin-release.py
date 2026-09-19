@@ -56,6 +56,8 @@ def regular_files(directory: Path) -> list[Path]:
                     raise ValueError(f"Plugin contains a symlink: {Path(current) / dirname}")
             dirs[:] = sorted(name for name in dirs if name not in SKIP_DIRS)
             for filename in sorted(files):
+                if filename == "mf-stats.json":
+                    continue
                 result.append(Path(current) / filename)
     for path in result:
         if path.is_symlink() or not path.is_file():
