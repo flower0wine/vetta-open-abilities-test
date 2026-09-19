@@ -87,10 +87,12 @@ def build(slug: str, output_dir: Path, min_app_version: str) -> dict:
             for path in files:
                 relative = path.relative_to(directory).as_posix()
                 info = zipfile.ZipInfo(relative, date_time=(1980, 1, 1, 0, 0, 0))
-                info.compress_type = zipfile.ZIP_DEFLATED
+                # Stored entries keep the archive byte-for-byte reproducible across
+                # Windows and Linux instead of depending on the host zlib version.
+                info.compress_type = zipfile.ZIP_STORED
                 info.create_system = 3
                 info.external_attr = 0o100644 << 16
-                archive.writestr(info, packaged_bytes(path), compresslevel=9)
+                archive.writestr(info, packaged_bytes(path))
         data = target.read_bytes()
         if len(data) > MAX_BYTES:
             raise ValueError(f"Plugin ZIP exceeds the 50 MB Desktop limit: {slug}")

@@ -2,7 +2,7 @@
   "schemaVersion": 3,
   "name": "vetta-open-abilities-test",
   "displayName": "Vetta Open Abilities Test",
-  "marketplaceVersion": "2026.09.19-2",
+  "marketplaceVersion": "2026.09.19-3",
   "repository": "https://github.com/flower0wine/vetta-open-abilities-test",
   "minAppVersion": "0.5.59",
   "abilities": [
@@ -31,48 +31,6 @@
       "source": {
         "path": "abilities/skills/hello-vetta"
       }
-    },
-    {
-      "type": "plugin",
-      "slug": "open-marketplace-demo-plugin",
-      "name": "Extension Safety Demo",
-      "description": "A minimal disabled-by-default extension used to verify safe GitHub marketplace installation.",
-      "version": "1.0.0",
-      "configVersion": 1,
-      "license": "MIT",
-      "author": "Vetta",
-      "category": "Examples",
-      "tags": [
-        "example",
-        "extension",
-        "open-source"
-      ],
-      "detail": {
-        "i18n": {
-          "zh": {
-            "name": "扩展安全示例",
-            "description": "用于验证安全安装、权限授权、启停与卸载流程的最小扩展。"
-          }
-        }
-      },
-      "source": {
-        "path": "abilities/plugins/open-marketplace-demo-plugin"
-      },
-      "releases": [
-        {
-          "version": "1.0.0",
-          "minAppVersion": "0.5.59",
-          "pluginApiVersion": "^2.5.0",
-          "permissions": [
-            "storage.read"
-          ],
-          "commands": [],
-          "artifact": {
-            "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-open-marketplace-demo-plugin-1.0.0/open-marketplace-demo-plugin-1.0.0.zip",
-            "sha256": "115b743bab8360c1d1d6fe88de98f0625c7738089b35a6d0c2d125a47c9095d0"
-          }
-        }
-      ]
     },
     {
       "type": "mcp",
@@ -187,49 +145,6 @@
       }
     },
     {
-      "type": "bundle",
-      "slug": "open-marketplace-starter",
-      "name": "Open Abilities Starter",
-      "description": "A selectable collection for trying greetings, extension safety, and current documentation.",
-      "version": "1.2.0",
-      "configVersion": 1,
-      "license": "MIT",
-      "author": "Vetta",
-      "category": "Examples",
-      "tags": [
-        "example",
-        "collection",
-        "open-source"
-      ],
-      "detail": {
-        "i18n": {
-          "zh": {
-            "name": "开源能力入门套装",
-            "description": "可选择安装问候、扩展安全和文档检索能力。"
-          }
-        }
-      },
-      "source": {
-        "path": "abilities/bundles/open-marketplace-starter"
-      },
-      "config": {
-        "members": [
-          {
-            "type": "skill",
-            "slug": "hello-vetta"
-          },
-          {
-            "type": "plugin",
-            "slug": "open-marketplace-demo-plugin"
-          },
-          {
-            "type": "mcp",
-            "slug": "context7"
-          }
-        ]
-      }
-    },
-    {
       "type": "plugin",
       "slug": "feishu",
       "name": "Feishu",
@@ -282,7 +197,7 @@
           "commands": [],
           "artifact": {
             "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-feishu-1.0.4/feishu-1.0.4.zip",
-            "sha256": "aace0deb3513a33be58b895a180b74a362fd1dc4b497c9291c8e9a6cae228545"
+            "sha256": "8887ebb1d94b91450f314ae2af096bd31ce712e1c89cd32a08b9a9e9c5ed6bd8"
           }
         }
       ]
@@ -346,7 +261,7 @@
           "commands": [],
           "artifact": {
             "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-cli-proxy-api-1.10.2/cli-proxy-api-1.10.2.zip",
-            "sha256": "c737f316058b0386a8fea0d3b708e64b6eeb51d7a717adb14e1eb2e797c57e3d"
+            "sha256": "efecba06755d93f45738eb676100730a4e61b39f13eeb9b2102c3b2813f3afe5"
           }
         }
       ]
@@ -421,7 +336,7 @@
                 "commands": [],
                 "artifact": {
                   "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-shimo-reader-1.0.23/shimo-reader-1.0.23.zip",
-                  "sha256": "136fec8c15d75aa65fdbc2821f5c68559e949cd946923fda7f02413b0db16f21"
+                  "sha256": "ce1dde2fd3068231bce20f03e2ae58b105c8e2f27d63a0baf30da730506996aa"
                 }
               }
             ]
@@ -486,7 +401,7 @@
           "commands": [],
           "artifact": {
             "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-xiaohongshu-1.1.22/xiaohongshu-1.1.22.zip",
-            "sha256": "188fe4ad238fe7bcc85bc232d4e997c85052cd8ba6bb65b4ba9d5ca67b6c1e3c"
+            "sha256": "47607fe786bed5023fe0ba8264894bfdd82f09ae423bf839629caaf99a681fa4"
           }
         }
       ]
@@ -541,7 +456,7 @@
           "commands": [],
           "artifact": {
             "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-vetta-tihu-0.3.0/vetta-tihu-0.3.0.zip",
-            "sha256": "36909292ebaa049d110a70aa6cb557928e81b560e1a5d12e27960d7f75ddf847"
+            "sha256": "2f1a0b54ecea099f7720e81a2f736e30321cfe8108aa286997c0ce2be9693c0e"
           }
         }
       ]
