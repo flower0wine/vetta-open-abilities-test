@@ -2,7 +2,7 @@
   "schemaVersion": 3,
   "name": "vetta-open-abilities-test",
   "displayName": "Vetta Open Abilities Test",
-  "marketplaceVersion": "2026.09.19-1",
+  "marketplaceVersion": "2026.09.19-2",
   "repository": "https://github.com/flower0wine/vetta-open-abilities-test",
   "minAppVersion": "0.5.59",
   "abilities": [
@@ -227,6 +227,353 @@
             "slug": "context7"
           }
         ]
+      }
+    },
+    {
+      "type": "plugin",
+      "slug": "feishu",
+      "name": "Feishu",
+      "description": "Use the official lark-cli and its built-in skills for Feishu documents, messages, calendars, Base, tasks and more.",
+      "version": "1.0.4",
+      "configVersion": 1,
+      "license": "MIT",
+      "author": "Vetta / Lark Suite",
+      "category": "Productivity",
+      "categoryI18n": {
+        "zh": "效率",
+        "en": "Productivity"
+      },
+      "tags": [
+        "feishu",
+        "lark",
+        "documents",
+        "calendar",
+        "base",
+        "tasks"
+      ],
+      "detail": {
+        "i18n": {
+          "zh": {
+            "name": "飞书",
+            "description": "使用官方 lark-cli 及其内置 Skills 处理飞书文档、消息、日历、多维表格、任务等内容。",
+            "tags": [
+              "飞书",
+              "文档",
+              "日历",
+              "多维表格",
+              "任务"
+            ]
+          }
+        }
+      },
+      "source": {
+        "path": "abilities/plugins/feishu"
+      },
+      "releases": [
+        {
+          "version": "1.0.4",
+          "minAppVersion": "0.5.59",
+          "pluginApiVersion": "^2.0.0",
+          "permissions": [
+            "ui.slot.ability-detail",
+            "shell.openExternal",
+            "agent.skills.control"
+          ],
+          "commands": [],
+          "artifact": {
+            "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-feishu-1.0.4/feishu-1.0.4.zip",
+            "sha256": "aace0deb3513a33be58b895a180b74a362fd1dc4b497c9291c8e9a6cae228545"
+          }
+        }
+      ]
+    },
+    {
+      "type": "plugin",
+      "slug": "cli-proxy-api",
+      "name": "CLIProxyAPI",
+      "description": "Run a managed local gateway for Gemini CLI, Codex, Claude, Antigravity, Kimi and xAI accounts, then use its models in Vetta.",
+      "version": "1.10.2",
+      "configVersion": 1,
+      "license": "MIT",
+      "author": "Vetta / Router For Me",
+      "category": "Development",
+      "categoryI18n": {
+        "zh": "开发",
+        "en": "Development"
+      },
+      "tags": [
+        "models",
+        "oauth",
+        "gateway",
+        "gemini",
+        "codex",
+        "claude"
+      ],
+      "detail": {
+        "i18n": {
+          "zh": {
+            "name": "CLIProxyAPI",
+            "description": "运行受管的本地模型网关，连接 Gemini CLI、Codex、Claude、Antigravity、Kimi 与 xAI 账号，并在 Vetta 中使用动态发现的模型。",
+            "tags": [
+              "模型",
+              "OAuth",
+              "网关",
+              "Gemini",
+              "Codex",
+              "Claude"
+            ]
+          }
+        }
+      },
+      "source": {
+        "path": "abilities/plugins/cli-proxy-api"
+      },
+      "releases": [
+        {
+          "version": "1.10.2",
+          "minAppVersion": "0.5.59",
+          "pluginApiVersion": "^2.4.0",
+          "permissions": [
+            "ui.slot.ability-detail",
+            "ui.slot.workspace-view",
+            "storage.read",
+            "storage.write",
+            "shell.openExternal",
+            "models.manage",
+            "media.provider.register",
+            "network.fetch"
+          ],
+          "commands": [],
+          "artifact": {
+            "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-cli-proxy-api-1.10.2/cli-proxy-api-1.10.2.zip",
+            "sha256": "c737f316058b0386a8fea0d3b708e64b6eeb51d7a717adb14e1eb2e797c57e3d"
+          }
+        }
+      ]
+    },
+    {
+      "type": "bundle",
+      "slug": "shimo",
+      "name": "Shimo",
+      "description": "An immersive bilingual reading workspace for books, poetry and study notes in Vetta, with Shimo reading Skills shipped inside the reader plugin.",
+      "version": "1.0.0",
+      "configVersion": 1,
+      "license": "MIT",
+      "author": "Vetta",
+      "category": "Education",
+      "categoryI18n": {
+        "zh": "学习",
+        "en": "Education"
+      },
+      "tags": [
+        "reading",
+        "poetry",
+        "pdf",
+        "pinyin",
+        "notes",
+        "bilingual"
+      ],
+      "detail": {
+        "i18n": {
+          "zh": {
+            "name": "拾墨",
+            "description": "在 Vetta 中沉浸式阅读书籍与诗歌，划选内容即可提问、解析、标注拼音并保存阅读记录。",
+            "tags": [
+              "阅读",
+              "诗歌",
+              "PDF",
+              "拼音",
+              "笔记",
+              "中英文"
+            ]
+          }
+        }
+      },
+      "source": {
+        "path": "abilities/bundles/shimo"
+      },
+      "config": {
+        "members": [
+          {
+            "type": "plugin",
+            "slug": "shimo-reader",
+            "source": {
+              "path": "abilities/plugins/shimo"
+            },
+            "version": "1.0.23",
+            "releases": [
+              {
+                "version": "1.0.23",
+                "minAppVersion": "0.5.59",
+                "pluginApiVersion": "^2.1.0",
+                "permissions": [
+                  "ui.slot.workspace-view",
+                  "ui.slot.activity-tab",
+                  "ui.file-explorer.context-menu",
+                  "agent.skills.control",
+                  "fs.write",
+                  "storage.read",
+                  "storage.write",
+                  "ai.models.list",
+                  "ai.complete",
+                  "ai.ocr.recognize"
+                ],
+                "commands": [],
+                "artifact": {
+                  "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-shimo-reader-1.0.23/shimo-reader-1.0.23.zip",
+                  "sha256": "136fec8c15d75aa65fdbc2821f5c68559e949cd946923fda7f02413b0db16f21"
+                }
+              }
+            ]
+          },
+          {
+            "type": "skill",
+            "slug": "pdf",
+            "source": {
+              "path": "abilities/skills/pdf"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "plugin",
+      "slug": "xiaohongshu",
+      "name": "Xiaohongshu Accounts",
+      "description": "Manage multiple Xiaohongshu accounts and run built-in MCP tasks concurrently through the account selected for each task.",
+      "version": "1.1.22",
+      "configVersion": 1,
+      "license": "Apache-2.0",
+      "author": "Vetta / xpzouying",
+      "category": "Social",
+      "categoryI18n": {
+        "zh": "社交",
+        "en": "Social"
+      },
+      "tags": [
+        "xiaohongshu",
+        "rednote",
+        "social",
+        "content",
+        "automation"
+      ],
+      "detail": {
+        "i18n": {
+          "zh": {
+            "name": "小红书账号",
+            "description": "在 Vetta 中管理多个小红书账号，Agent 可自动选择账号并同时执行内置 MCP 任务。"
+          }
+        }
+      },
+      "source": {
+        "path": "abilities/plugins/xiaohongshu"
+      },
+      "releases": [
+        {
+          "version": "1.1.22",
+          "minAppVersion": "0.5.59",
+          "pluginApiVersion": "^2.0.0",
+          "permissions": [
+            "agent.mcp.control",
+            "ui.slot.ability-detail",
+            "ui.slot.workspace-view",
+            "storage.read",
+            "storage.write",
+            "secrets.read",
+            "secrets.write",
+            "network.fetch"
+          ],
+          "commands": [],
+          "artifact": {
+            "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-xiaohongshu-1.1.22/xiaohongshu-1.1.22.zip",
+            "sha256": "188fe4ad238fe7bcc85bc232d4e997c85052cd8ba6bb65b4ba9d5ca67b6c1e3c"
+          }
+        }
+      ]
+    },
+    {
+      "type": "plugin",
+      "slug": "vetta-tihu",
+      "name": "Pelican Ride",
+      "description": "A bicycle-riding pelican mini game in the activity panel. Chat with the AI to change its speed, make it jump, ring the bell or switch between day, dusk, night and rain.",
+      "version": "0.3.0",
+      "configVersion": 1,
+      "license": "MIT",
+      "author": "Vetta",
+      "category": "Entertainment",
+      "categoryI18n": {
+        "zh": "娱乐",
+        "en": "Entertainment"
+      },
+      "tags": [
+        "game",
+        "pelican",
+        "animation",
+        "fun"
+      ],
+      "detail": {
+        "i18n": {
+          "zh": {
+            "name": "鹈鹕骑车",
+            "description": "活动面板里骑自行车的鹈鹕小游戏。和 AI 对话即可调速度、让它跳跃、按铃铛，或切换白天、黄昏、天黑与下雨场景。",
+            "tags": [
+              "游戏",
+              "鹈鹕",
+              "动画",
+              "趣味"
+            ]
+          }
+        }
+      },
+      "source": {
+        "path": "abilities/plugins/vetta-tihu"
+      },
+      "releases": [
+        {
+          "version": "0.3.0",
+          "minAppVersion": "0.5.59",
+          "pluginApiVersion": "^2.0.0",
+          "permissions": [
+            "ui.slot.activity-tab",
+            "agent.tools.register",
+            "agent.toolHandler.execute"
+          ],
+          "commands": [],
+          "artifact": {
+            "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-vetta-tihu-0.3.0/vetta-tihu-0.3.0.zip",
+            "sha256": "36909292ebaa049d110a70aa6cb557928e81b560e1a5d12e27960d7f75ddf847"
+          }
+        }
+      ]
+    },
+    {
+      "type": "skill",
+      "slug": "pdf",
+      "name": "PDF Toolkit",
+      "description": "Read, create and review PDFs where layout matters, verifying output by rendering pages instead of trusting the text layer.",
+      "version": "1.0.0",
+      "configVersion": 1,
+      "license": "Apache-2.0",
+      "category": "Documents",
+      "categoryI18n": {
+        "zh": "文档",
+        "en": "Documents"
+      },
+      "tags": [
+        "pdf",
+        "document",
+        "render"
+      ],
+      "detail": {
+        "i18n": {
+          "zh": {
+            "name": "PDF 工具箱",
+            "description": "读取、生成与审阅 PDF，通过渲染页面确认最终版式，而不是只看文本抽取结果。"
+          }
+        }
+      },
+      "source": {
+        "path": "abilities/skills/pdf"
       }
     }
   ]

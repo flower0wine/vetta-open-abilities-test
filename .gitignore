@@ -1,2 +1,3 @@
 .release-artifacts/
 abilities/plugins/*/dist/
+abilities/plugins/*/release/

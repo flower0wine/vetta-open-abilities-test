@@ -2,7 +2,7 @@
 
 Public test marketplace for the Vetta desktop application's GitHub ability source.
 
-The `refa/marketplace-v3` branch exercises the schema v3 plugin artifact path. Its workflow builds the demo plugin from source, creates a deterministic ZIP, checks the catalog digest, retains the ZIP as a workflow artifact, and publishes the same bytes as a test prerelease asset.
+The `refa/marketplace-v3` branch exercises the schema v3 plugin artifact path. Its workflow builds and tests every plugin from source, creates deterministic ZIPs, checks the catalog digests, retains the ZIPs as a workflow artifact, and publishes the same bytes as test prerelease assets. The branch includes the real plugins from the official marketplace alongside the small safety demo.
 
 ## Repository layout
 

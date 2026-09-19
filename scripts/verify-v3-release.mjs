@@ -8,7 +8,13 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const manifest = JSON.parse(readFileSync(resolve(root, ".vetta/marketplace.json"), "utf8"));
 if (manifest.schemaVersion !== 3) throw new Error("Expected marketplace schema v3");
 
-const plugins = manifest.abilities.filter((ability) => ability.type === "plugin");
+const plugins = manifest.abilities.flatMap((ability) =>
+  ability.type === "plugin"
+    ? [ability]
+    : ability.type === "bundle"
+      ? ability.config.members.filter((member) => member.type === "plugin" && member.source)
+      : [],
+);
 for (const ability of plugins) {
   const plugin = JSON.parse(readFileSync(resolve(root, ability.source.path, "plugin.json"), "utf8"));
   const release = ability.releases?.find((candidate) => candidate.version === plugin.version);
@@ -26,7 +32,7 @@ for (const ability of plugins) {
 
 const trackedBuildOutput = execFileSync(
   "git",
-  ["ls-files", "--", "abilities/plugins/*/dist", ".release-artifacts"],
+  ["ls-files", "--", "abilities/plugins/*/dist", "abilities/plugins/*/release", ".release-artifacts"],
   { cwd: root, encoding: "utf8" },
 ).trim();
 if (trackedBuildOutput) throw new Error(`Build output must not be committed:\n${trackedBuildOutput}`);
