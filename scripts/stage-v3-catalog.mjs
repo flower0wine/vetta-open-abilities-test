@@ -56,7 +56,7 @@ for (const slug of slugs) {
   const descriptor = JSON.parse(readFileSync(join(root, plugin.source.path, "plugin.json"), "utf8"));
   if (descriptor.id !== slug) throw new Error(`Plugin identity mismatch: ${slug}`);
   const prefix = `${slug}-${descriptor.version}`;
-  const archive = readFileSync(join(artifactDir, `${prefix}.zip`));
+  const archive = readFileSync(join(artifactDir, `${prefix}.vettapkg`));
   const release = JSON.parse(readFileSync(join(artifactDir, `${prefix}.json`), "utf8"));
   if (release.version !== descriptor.version || release.minAppVersion !== minAppVersion ||
       release.pluginApiVersion !== descriptor.pluginApiVersion ||

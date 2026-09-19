@@ -2,7 +2,7 @@
   "schemaVersion": 3,
   "name": "vetta-open-abilities-test",
   "displayName": "Vetta Open Abilities Test",
-  "marketplaceVersion": "2026.09.19-7",
+  "marketplaceVersion": "2026.09.19-8",
   "repository": "https://github.com/flower0wine/vetta-open-abilities-test",
   "minAppVersion": "0.5.59",
   "abilities": [
@@ -196,7 +196,7 @@
           ],
           "commands": [],
           "artifact": {
-            "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-feishu-1.0.4/feishu-1.0.4.zip",
+            "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-feishu-1.0.4/feishu-1.0.4.vettapkg",
             "sha256": "d1d508eb962947d3061132488cba761b955268991fc4ebab6881cc4618c34ae0"
           }
         }
@@ -260,7 +260,7 @@
           ],
           "commands": [],
           "artifact": {
-            "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-cli-proxy-api-1.10.2/cli-proxy-api-1.10.2.zip",
+            "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-cli-proxy-api-1.10.2/cli-proxy-api-1.10.2.vettapkg",
             "sha256": "a52da53ab1c4f861b0ae834e335eec002f9d1242aa9c18a1f9847a8b12608e42"
           }
         }
@@ -335,7 +335,7 @@
                 ],
                 "commands": [],
                 "artifact": {
-                  "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-shimo-reader-1.0.23/shimo-reader-1.0.23.zip",
+                  "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-shimo-reader-1.0.23/shimo-reader-1.0.23.vettapkg",
                   "sha256": "43668b793ff5b0b5ebbf5aeaf435434fad9607155f9e4004bc2791ca76dd4d59"
                 }
               }
@@ -400,7 +400,7 @@
           ],
           "commands": [],
           "artifact": {
-            "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-xiaohongshu-1.1.22/xiaohongshu-1.1.22.zip",
+            "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-xiaohongshu-1.1.22/xiaohongshu-1.1.22.vettapkg",
             "sha256": "ab26f46f2be7fa86eb39d7f4d97139c1ffe06cff0283ab031b2df943433868ba"
           }
         }
@@ -455,7 +455,7 @@
           ],
           "commands": [],
           "artifact": {
-            "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-vetta-tihu-0.3.0/vetta-tihu-0.3.0.zip",
+            "url": "https://github.com/flower0wine/vetta-open-abilities-test/releases/download/plugin-vetta-tihu-0.3.0/vetta-tihu-0.3.0.vettapkg",
             "sha256": "fbdfef94bc1693838dc36a8fba8c75b936e1327bc421ceeca9bd673d3ba4ac8a"
           }
         }

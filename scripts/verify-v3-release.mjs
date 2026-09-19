@@ -20,7 +20,7 @@ for (const ability of plugins) {
   const release = ability.releases?.find((candidate) => candidate.version === plugin.version);
   if (!release) throw new Error(`Missing release for ${ability.slug}@${plugin.version}`);
   const prefix = `${ability.slug}-${plugin.version}`;
-  const archive = readFileSync(resolve(root, ".release-artifacts", `${prefix}.zip`));
+  const archive = readFileSync(resolve(root, ".release-artifacts", `${prefix}.vettapkg`));
   const generated = JSON.parse(readFileSync(resolve(root, ".release-artifacts", `${prefix}.json`), "utf8"));
   if (JSON.stringify(release) !== JSON.stringify(generated)) {
     throw new Error(`Generated release differs from the catalog: ${ability.slug}`);

@@ -74,7 +74,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: marketplace-v3-plugin-archives
-          path: .release-artifacts/*.zip
+          path: .release-artifacts/*.vettapkg
           if-no-files-found: error
           include-hidden-files: true
           retention-days: 7
@@ -99,14 +99,17 @@ jobs:
           NODE
           while read -r slug version; do
             tag="plugin-$slug-$version"
-            asset=".release-artifacts/$slug-$version.zip"
+            asset=".release-artifacts/$slug-$version.vettapkg"
             expected="$(sha256sum "$asset" | cut -d' ' -f1)"
             existing_dir="/tmp/existing-release-$slug-$version"
             if gh release view "$tag" >/dev/null 2>&1; then
               mkdir -p "$existing_dir"
-              gh release download "$tag" --pattern "$(basename "$asset")" --dir "$existing_dir"
-              actual="$(sha256sum "$existing_dir/$(basename "$asset")" | cut -d' ' -f1)"
-              test "$actual" = "$expected"
+              if gh release download "$tag" --pattern "$(basename "$asset")" --dir "$existing_dir"; then
+                actual="$(sha256sum "$existing_dir/$(basename "$asset")" | cut -d' ' -f1)"
+                test "$actual" = "$expected"
+              else
+                gh release upload "$tag" "$asset"
+              fi
             else
               gh release create "$tag" "$asset" \
                 --target "$GITHUB_SHA" \
@@ -142,7 +145,7 @@ jobs:
             published_dir="/tmp/published-release-$slug-$version"
             mkdir -p "$published_dir"
             gh release download "plugin-$slug-$version" \
-              --pattern "$slug-$version.zip" \
+              --pattern "$slug-$version.vettapkg" \
               --dir "$published_dir"
-            echo "$sha256  $published_dir/$slug-$version.zip" | sha256sum --check --strict
+            echo "$sha256  $published_dir/$slug-$version.vettapkg" | sha256sum --check --strict
           done < /tmp/marketplace-published-releases
